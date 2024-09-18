@@ -1,0 +1,18 @@
+1- yarn init -y
+2- yarn add express @types/express jest @types/jest axios ts-node ts-jest nodemon typescript
+3- npx tsc --init
+4- npx ts-jest config:init
+//run test
+5- npx jest
+6- npm install prisma --save-dev 
+7- npm install @prisma/client
+8- npm i dotenv
+//setup prismaClient
+
+9- Use fs to read the provided JSON file containing train stations and serve it via an API endpoint.
+10- Set up routes:
+    - GET /stations: To retrieve the list of train stations.
+    - POST /trips: To create and save a trip.
+    - GET /trips: To list all saved trips.
+    - GET /trips/
+        : To get the details of a specific trip.
