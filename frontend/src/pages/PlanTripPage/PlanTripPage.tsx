@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import SearchStations from '../../components/SearchStations/SearchStations';
 import TripManager from '../../components/TripManager/TripManager';
 import { IStation } from '../../types/IStation';
+import BodyTemplate from '../../components/BodyTemplate/BodyTemplate';
 
-const SearchPage: React.FC = () => {
+const PlanTripPage: React.FC = () => {
     const [selectedStations, setSelectedStations] = useState<IStation[]>([]);
 
     const handleSelectStation = (station: IStation) => {
@@ -11,11 +12,23 @@ const SearchPage: React.FC = () => {
     };
 
     return (
-        <div>
-            <SearchStations onSelectStation={handleSelectStation} />
-            <TripManager selectedStations={selectedStations} />
-        </div>
+        <BodyTemplate
+            headerSession={
+                <h1>Nice to see you. Let's travel??</h1>
+            }
+            formSession={
+                <>
+                    <SearchStations onSelectStation={handleSelectStation} />
+                </>
+            }
+            mapSession={
+                <div>
+                    <TripManager selectedStations={selectedStations} />
+                </div>
+            }
+            >
+        </BodyTemplate>
     );
 };
 
-export default SearchPage;
+export default PlanTripPage;

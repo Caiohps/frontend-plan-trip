@@ -28,8 +28,21 @@ const PlannedTripsPage: React.FC = () => {
     const mapZoom: number = 1;
 
     return (
+        <>
         <div>
-            <h1>Trip Map</h1>
+        <h1>destino</h1>
+        {selectedStation ? (
+            <Map
+                endpoints={tripEndpoints}
+                center={selectedStation}
+                zoom={mapZoom}
+            />
+        ) : (
+            <p>Loading map...</p>
+        )}
+    </div>
+        <div>
+            <h1>destino</h1>
             {selectedStation ? (
                 <Map
                     endpoints={tripEndpoints}
@@ -40,6 +53,7 @@ const PlannedTripsPage: React.FC = () => {
                 <p>Loading map...</p>
             )}
         </div>
+        </>
     );
 };
 

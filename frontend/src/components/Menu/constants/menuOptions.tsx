@@ -10,7 +10,7 @@ export const MENU_OPTIONS: MenuProps['items'] = [
     key: 'plan',
     },
     {
-        label: <Link to="planne-trip">Planned Trips</Link>,
+        label: <Link to="/planned-trips">Planned Trips</Link>,
         key: 'planned',
         icon: <ScheduleOutlined />
     }

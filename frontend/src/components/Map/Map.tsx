@@ -14,11 +14,11 @@ const Map: React.FC<MapProps> = ({ endpoints, center, zoom }) => {
         <MapContainer 
             center={[center.lat, center.lng]} 
             zoom={zoom} 
-            style={{ height: '500px', width: '100%' }}
+            style={{ height: '450px', width: '75%' }}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
             />
             {endpoints.map((endpoint, index) => (
                 <Marker key={index} position={[endpoint.lat, endpoint.lng]}>
